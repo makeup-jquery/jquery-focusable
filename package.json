@@ -1,0 +1,46 @@
+{
+  "name": "@ebay/jquery-focusable",
+  "description": "Finds all focusable descendant elements of the given selector and returns them as a new jQuery object",
+  "version": "0.0.3",
+  "scripts": {
+      "start": "karma start --autoWatch true --singleRun false",
+      "test": "karma start",
+      "prepublish": "npm run build",
+      "lint": "jshint jquery.focusable.js > jshint.txt",
+      "minify": "jsmin -o jquery.focusable.min.js jquery.focusable.js",
+      "clean": "rimraf test_reports *.min.js jshint.txt",
+      "build": "npm run clean && npm run lint && npm test && npm run minify"
+  },
+  "author": "Ian McBurnie <ianmcburnie@hotmail.com>",
+  "homepage": "https://github.com/ianmcburnie/jquery-focusable",
+  "bugs": {
+    "url": "https://github.com/ianmcburnie/jquery-focusable/issues"
+  },
+  "keywords": [
+    "jquery-plugin",
+    "ecosystem:jquery",
+    "ebayui",
+    "accessibility",
+    "a11y"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ianmcburnie/jquery-focusable.git"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "coveralls": "^2.11.4",
+    "jasmine-core": "^2.3.4",
+    "jquery": "1.11.2",
+    "jshint": "^2.8.0",
+    "jsmin": "^1.0.1",
+    "karma": "^0.13.9",
+    "karma-coverage": "^0.5.0",
+    "karma-html-reporter": "^0.2.6",
+    "karma-jasmine": "^0.3.6",
+    "karma-junit-reporter": "^0.3.3",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "phantomjs": "^1.9.18",
+    "rimraf": "^2.4.4"
+  }
+}

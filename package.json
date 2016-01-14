@@ -32,7 +32,7 @@
   "devDependencies": {
     "coveralls": "^2.11.4",
     "jasmine-core": "^2.3.4",
-    "jquery": "1.11.2",
+    "jquery": ">=1.11 < 3",
     "jshint": "^2.8.0",
     "jsmin": "^1.0.1",
     "karma": "^0.13.9",
@@ -43,5 +43,8 @@
     "karma-phantomjs-launcher": "^0.2.1",
     "phantomjs": "^1.9.18",
     "rimraf": "^2.4.4"
+  },
+  "peerDependencies": {
+    "jquery": ">=1.11 < 3"
   }
 }

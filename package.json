@@ -2,6 +2,7 @@
   "name": "@ebay/jquery-focusable",
   "description": "Finds all focusable descendant elements of the given selector and returns them as a new jQuery object",
   "version": "0.0.3",
+  "main": "./jquery.focusable.js",
   "scripts": {
       "start": "karma start --autoWatch true --singleRun false",
       "test": "karma start",

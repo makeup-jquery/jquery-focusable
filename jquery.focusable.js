@@ -1,7 +1,7 @@
 /**
 * @function $.fn.focusable
 * @name jquery-focusable
-* @version 0.0.4
+* @version 0.0.5
 * @author Ian McBurnie <ianmcburnie@hotmail.com>
 * @desc Finds all focusable descendant elements of the given selector and returns
 * them as a new jQuery object

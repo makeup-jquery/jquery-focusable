@@ -1,10 +1,9 @@
 /**
 * @function $.fn.focusable
 * @name jquery-focusable
-* @version 0.0.5
+* @version 0.1.0
 * @author Ian McBurnie <ianmcburnie@hotmail.com>
-* @desc Finds all focusable descendant elements of the given selector and returns
-* them as a new jQuery object
+* @desc Gets all focusable descendant elements for the first element in the set of matched elements
 * @param {options}
 * @param {boolean} options.findNegativeTabindex
 * @param {boolean} options.findPositiveTabindex
@@ -29,7 +28,7 @@
     $.fn.focusable = function focusable(options) {
         var opts = $.extend({}, $.fn.focusable.defaults, options);
 
-        return $(this).find(focusableElements.join())
+        return $(this).first().find(focusableElements.join())
             .filter(function(index) {
                 return (opts.findNegativeTabindex === true) ? true : $(this).attr('tabindex') !== '-1';
             })

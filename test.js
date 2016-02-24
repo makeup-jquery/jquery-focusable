@@ -126,13 +126,13 @@ describe("jquery.focusable.js", function() {
         expect($focusable.size()).toBe(1);
     });
 
-    it("should work on collections of size greater than 1", function(){
+    it("should only return focusable elements for first element in set of matched elements", function(){
         // setup
         $('body').append('<div><button>').append('<div><button>');
         // execute
         var $focusable = $('div').focusable();
         // assert
-        expect($focusable.size()).toBe(2);
+        expect($focusable.size()).toBe(1);
     });
 
 });

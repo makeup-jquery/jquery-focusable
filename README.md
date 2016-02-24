@@ -5,7 +5,7 @@
     <a href='https://coveralls.io/github/ianmcburnie/jquery-focusable?branch=master'><img src='https://coveralls.io/repos/ianmcburnie/jquery-focusable/badge.svg?branch=master&service=github' alt='Coverage Status' /></a>
 </p>
 
-Finds all focusable descendant elements of the given selector and returns a new jQuery object.
+Gets all focusable descendant elements for the first element in the set of matched elements.
 
 ```js
 $(collection).focusable([options]);
@@ -15,12 +15,10 @@ $(collection).focusable([options]);
 
 This plugin is still in an experimental state, until it reaches v1.0.0 you must consider all minor releases as breaking changes. Patch releases may introduce new features, but will be backwards compatible.
 
-Please use the tilde range specifier in your package.json to pin to a fixed major and minor version.
-
 ## Install
 
 ```js
-npm install @ebay/jquery-focusable --save
+npm install @ebay/jquery-focusable
 ```
 
 ## Default Options
@@ -37,7 +35,7 @@ $.fn.focusable.defaults = {
 ```js
 $('body').empty().append('<button>').append('<button>');
 
-expect($('body').focusable().size()).toBe(2);
+expect($('body').focusable().length).toBe(2);
 ```
 
 ## Development

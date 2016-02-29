@@ -1,17 +1,16 @@
 /**
 * @function $.fn.focusable
 * @name jquery-focusable
-* @version 0.1.0
+* @version 0.2.0
 * @author Ian McBurnie <ianmcburnie@hotmail.com>
 * @desc Gets all focusable descendant elements for the first element in the set of matched elements
 * @param {options}
 * @param {boolean} options.findNegativeTabindex
 * @param {boolean} options.findPositiveTabindex
-* @todo sort return collection by positive tabindex order
 */
 (function ($, window, document, undefined) {
 
-    var focusableElements = [
+    var focusableElementsList = [
         'a[href]',
         'button:not([disabled])',
         'area[href]',
@@ -25,22 +24,28 @@
         '*[contenteditable]'
     ];
 
-    $.fn.focusable = function focusable(options) {
-        var opts = $.extend({}, $.fn.focusable.defaults, options);
+    var focusableElementsSelector = focusableElementsList.join();
 
-        return $(this).first().find(focusableElements.join())
-            .filter(function(index) {
-                return (opts.findNegativeTabindex === true) ? true : $(this).attr('tabindex') !== '-1';
+    var defaults = {
+        findNegativeTabindex : true,
+        findPositiveTabindex : true
+    };
+
+    $.fn.focusable = function focusable(options) {
+        var opts = $.extend({}, defaults, options);
+
+        return $(this).first().find(focusableElementsSelector)
+            .filter(function() {
+                // if findNegativeTabindex option is truthy, immediately return the element.
+                // otherwise only return the element if tabindex is not negative
+                return opts.findNegativeTabindex || ($(this).attr('tabindex') !== '-1');
             })
-            .filter(function(index) {
-                return (opts.findPositiveTabindex === true) ? true : ($(this).attr('tabindex') > 0 === false);
+            .filter(function() {
+                // if findPositiveTabindex option is truthy, immediately return the element.
+                // otherwise only return the element if tabindex is not positive
+                return opts.findPositiveTabindex || ($(this).attr('tabindex') > 0 === false);
             }
         );
     };
 
 }(jQuery, window, document));
-
-$.fn.focusable.defaults = {
-    findNegativeTabindex : true,
-    findPositiveTabindex : true
-};

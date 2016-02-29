@@ -5,10 +5,10 @@
     <a href='https://coveralls.io/github/ianmcburnie/jquery-focusable?branch=master'><img src='https://coveralls.io/repos/ianmcburnie/jquery-focusable/badge.svg?branch=master&service=github' alt='Coverage Status' /></a>
 </p>
 
-Gets all focusable descendant elements for the first element in the set of matched elements.
+Gets all focusable descendant elements for the **first element** in the set of matched elements.
 
 ```js
-$(collection).focusable([options]);
+$(selector).focusable(options);
 ```
 
 ## Experimental
@@ -21,14 +21,10 @@ This plugin is still in an experimental state, until it reaches v1.0.0 you must 
 npm install @ebay/jquery-focusable
 ```
 
-## Default Options
+## Options
 
-```js
-$.fn.focusable.defaults = {
-    findNegativeTabindex : true,
-    findPositiveTabindex : true
-};
-```
+`findNegativeTabindex` - Find and return elements with tabindex equal to -1 (default: true)
+`findPositiveTabindex` - Find and return elements with tabindex greater than 0 (default: true)
 
 ## Example
 

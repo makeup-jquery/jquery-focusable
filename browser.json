@@ -1,5 +1,6 @@
 {
     "dependencies":[
-        {"require-run": "jquery"}
+        {"require-run": "jquery"},
+        "jquery.focusable.js"
     ]
 }

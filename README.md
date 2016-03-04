@@ -3,6 +3,8 @@
 <p>
     <a href="https://travis-ci.org/ianmcburnie/jquery-focusable"><img src="https://api.travis-ci.org/ianmcburnie/jquery-focusable.svg?branch=master" alt="Build Status" /></a>
     <a href='https://coveralls.io/github/ianmcburnie/jquery-focusable?branch=master'><img src='https://coveralls.io/repos/ianmcburnie/jquery-focusable/badge.svg?branch=master&service=github' alt='Coverage Status' /></a>
+    <a href="https://david-dm.org/ianmcburnie/jquery-focusable"><img src="https://david-dm.org/ianmcburnie/jquery-focusable.svg" alt="Dependency status" /></a>
+    <a href="https://david-dm.org/ianmcburnie/jquery-focusable#info=devDependencies"><img src="https://david-dm.org/ianmcburnie/jquery-focusable/dev-status.svg" alt="devDependency status" /></a>
 </p>
 
 Gets all focusable descendant elements for the **first element** in the set of matched elements.

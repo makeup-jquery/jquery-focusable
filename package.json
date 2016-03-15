@@ -1,5 +1,5 @@
 {
-  "name": "@ebay/jquery-focusable",
+  "name": "jquery-focusable",
   "description": "Gets all focusable descendant elements for the first element in the set of matched elements",
   "version": "0.2.1",
   "scripts": {

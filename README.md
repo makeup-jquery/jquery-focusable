@@ -1,4 +1,4 @@
-# @ebay/jquery-focusable
+# jquery-focusable
 
 <p>
     <a href="https://travis-ci.org/ianmcburnie/jquery-focusable"><img src="https://api.travis-ci.org/ianmcburnie/jquery-focusable.svg?branch=master" alt="Build Status" /></a>
@@ -20,7 +20,7 @@ This plugin is still in an experimental state, until it reaches v1.0.0 you must 
 ## Install
 
 ```js
-npm install @ebay/jquery-focusable
+npm install jquery-focusable
 ```
 
 ## Options

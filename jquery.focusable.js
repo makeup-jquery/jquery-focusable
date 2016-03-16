@@ -29,7 +29,7 @@
     * Gets all focusable descendant elements for the first element in the set of matched elements
     *
     * @class focusable
-    * @version 0.2.1
+    * @version 0.2.2
     * @param {Object} options
     * @param {boolean} options.findNegativeTabindex - will return elements with tabindex equal to -1 by default
     * @param {boolean} options.findPositiveTabindex - will return elements with tabindex greater than 0 by default

@@ -1,0 +1,15 @@
+{
+    "extends": "google",
+    "env": {
+        "browser": true,
+        "jquery": true
+    },
+    "rules": {
+        "indent": [2, 4],
+        "wrap-iife": [2, "any"],
+        "no-unused-vars": 0,
+        "no-shadow-restricted-names": 0,
+        "max-len": 0,
+        "valid-jsdoc": 0
+    }
+}

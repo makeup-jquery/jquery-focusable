@@ -1,41 +1,11 @@
-/**
+ /**
  * @file Gets all focusable descendant elements for the first element in the set of matched elements
  * @author Ian McBurnie <ianmcburnie@hotmail.com>
+ * @version 0.2.3
+ * @requires jquery
  */
-
 (function($, window, document, undefined) {
-
     var pluginName = 'jquery-focusable';
-
-    /**
-    * jQuery definition to anchor JsDoc comments.
-    *
-    * @see http://jquery.com/
-    * @name $
-    * @class jQuery Library
-    */
-
-    /**
-    * jQuery 'fn' definition to anchor JsDoc comments.
-    *
-    *
-    * @see http://jquery.com/
-    * @name fn
-    * @class jQuery Plugin Scope
-    * @memberof jQuery
-    */
-
-    /**
-    * Gets all focusable descendant elements for the first element in the set of matched elements
-    *
-    * @class focusable
-    * @version 0.2.3
-    * @param {Object} options
-    * @param {boolean} options.findNegativeTabindex - will return elements with tabindex equal to -1 by default
-    * @param {boolean} options.findPositiveTabindex - will return elements with tabindex greater than 0 by default
-    * @return {jQuery} chainable jQuery class
-    * @memberof jQuery.fn
-    */
 
     var focusableElementsList = [
         'a[href]',
@@ -58,6 +28,15 @@
         findPositiveTabindex: true
     };
 
+    /**
+    * jQuery collection plugin that implements aria-activedescendant keyboard navigation on given widgets
+    *
+    * @method "jQuery.fn.focusable"
+    * @param {Object} options options
+    * @param {boolean} options.findNegativeTabindex - will return elements with tabindex equal to -1 by default
+    * @param {boolean} options.findPositiveTabindex - will return elements with tabindex greater than 0 by default
+    * @return {jQuery} chainable jQuery class
+    */
     $.fn.focusable = function focusable(options) {
         var opts = $.extend({}, defaults, options);
 
@@ -74,5 +53,10 @@
             }
         );
     };
-
 }(jQuery, window, document));
+
+/**
+* The jQuery plugin namespace.
+* @external "jQuery.fn"
+* @see {@link http://learn.jquery.com/plugins/|jQuery Plugins}
+*/

@@ -52,10 +52,11 @@ Execute `npm run` to view all available CLI scripts:
 
 * `npm start` test driven development: watches code and re-tests after any change
 * `npm test` runs tests & generates reports (see reports section below)
-* `npm run lint` lints code and reports to jshint.txt
+* `npm run lint` lints code and reports errors to lint.txt
+* `npm run fix` attempts to auto fix code lint errors
 * `npm run minify` builds minified version of code
 * `npm run build` cleans, lints, tests and minifies (called on `npm prepublish` hook)
-* `npm run clean` deletes all generated test reports and coverage files
+* `npm run clean` deletes all generated files
 
 ## Reports
 

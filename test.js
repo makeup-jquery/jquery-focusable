@@ -1,3 +1,5 @@
+/* eslint no-undef: 0 */
+
 describe("when selector matches more than one element", function() {
     beforeAll(function() {
         $('body')
@@ -46,7 +48,7 @@ describe("when matched element contains elements with tabindex=0", function() {
         $('body')
             .append('<div tabindex="0">')
             .append('<div>')
-            .append('<div tabindex="0">')
+            .append('<div tabindex="0">');
 
         $focusable = $('body').focusable();
     });
@@ -61,7 +63,7 @@ describe("when matched element contains positive tabindexes", function() {
         $('body')
             .append('<button tabindex="1">')
             .append('<button>')
-            .append('<button tabindex="2">')
+            .append('<button tabindex="2">');
 
         $focusable = $('body').focusable();
     });
@@ -78,9 +80,9 @@ describe("when matched element contains positive tabindexes and findPositiveTabi
             .append('<button>')
             .append('<button tabindex="2">');
 
-        $focusable = $('body').focusable({findPositiveTabindex:false});
+        $focusable = $('body').focusable({ findPositiveTabindex: false });
     });
-    it("should observe option findPositiveTabindex=false", function(){
+    it("should observe option findPositiveTabindex=false", function() {
         expect($focusable.length).toBe(1);
     });
 });
@@ -91,11 +93,11 @@ describe("when matched element contains negative tabindexes", function() {
         $('body')
             .append('<button tabindex="-1">')
             .append('<button>')
-            .append('<button tabindex="-1">')
+            .append('<button tabindex="-1">');
 
         $focusable = $('body').focusable();
     });
-    it("should return elements with negative tabindexes", function(){
+    it("should return elements with negative tabindexes", function() {
         expect($focusable.length).toBe(3);
     });
 });
@@ -106,11 +108,11 @@ describe("when matched element contains negative tabindexes and findNegativeTabi
         $('body')
             .append('<button tabindex="-1">')
             .append('<button>')
-            .append('<button tabindex="-1">')
+            .append('<button tabindex="-1">');
 
-        $focusable = $('body').focusable({findNegativeTabindex:false});
+        $focusable = $('body').focusable({ findNegativeTabindex: false });
     });
-    it("should not return elements with negative tabindexes", function(){
+    it("should not return elements with negative tabindexes", function() {
         expect($focusable.length).toBe(1);
     });
 });

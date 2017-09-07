@@ -1,4 +1,4 @@
- /**
+/**
  * @file Gets all focusable descendant elements for the first element in the set of matched elements
  * @author Ian McBurnie <ianmcburnie@hotmail.com>
  * @version 0.3.0
@@ -50,8 +50,7 @@
                 // if findPositiveTabindex option is truthy, immediately return the element.
                 // otherwise only return the element if tabindex is not positive
                 return opts.findPositiveTabindex || ($(this).attr('tabindex') > 0 === false);
-            }
-        );
+            });
     };
 }(jQuery, window, document));
 

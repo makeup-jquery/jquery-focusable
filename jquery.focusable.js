@@ -1,7 +1,7 @@
 /**
  * @file Gets all focusable descendant elements for the first element in the set of matched elements
  * @author Ian McBurnie <ianmcburnie@hotmail.com>
- * @version 0.3.0
+ * @version 1.0.0
  * @requires jquery
  */
 (function($, window, document, undefined) {

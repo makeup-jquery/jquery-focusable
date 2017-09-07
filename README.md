@@ -21,8 +21,8 @@ npm install jquery-focusable
 
 ## Options
 
-`findNegativeTabindex` - Find and return elements with tabindex equal to -1 (default: true)
-`findPositiveTabindex` - Find and return elements with tabindex greater than 0 (default: true)
+* `findNegativeTabindex` - Find and return elements with tabindex equal to -1 (default: true)
+* `findPositiveTabindex` - Find and return elements with tabindex greater than 0 (default: true)
 
 ## Example
 

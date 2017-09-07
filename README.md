@@ -15,17 +15,9 @@ $(selector).focusable(options);
 
 ## Install
 
-<strike>
-```
-npm install @ebay/jquery-focusable
-```
-</strike>
-
 ```js
 npm install jquery-focusable
 ```
-
-**NOTE: The @ebay package scope is no longer supported. In order to receive latest NPM updates, please use the non-scoped version of this package.**
 
 ## Options
 

@@ -1,11 +1,11 @@
 /**
  * @file Gets all focusable descendant elements for the first element in the set of matched elements
  * @author Ian McBurnie <ianmcburnie@hotmail.com>
- * @version 1.0.0
+ * @version 1.0.1
  * @requires jquery
  */
-(function($, window, document, undefined) {
-    var pluginName = 'jquery-focusable';
+(function($, window, document, undefined) { // eslint-disable-line no-unused-vars
+    var pluginName = 'jquery-focusable'; // eslint-disable-line no-unused-vars
 
     var focusableElementsList = [
         'a[href]',

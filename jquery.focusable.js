@@ -29,7 +29,8 @@
     };
 
     /**
-    * jQuery collection plugin that implements aria-activedescendant keyboard navigation on given widgets
+    * jQuery collection plugin that gets all focusable descendant elements for
+    * the first element in the set of matched elements
     *
     * @method "jQuery.fn.focusable"
     * @param {Object} options options
